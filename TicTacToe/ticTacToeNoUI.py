@@ -11,11 +11,11 @@ def main():
     while win == False:
         get_player_choice()
         display_grid(grid)
-        if check_draw():
-            print("DRAW!")
-            break
         win = check_win()
         if win == True:
+            break
+        if check_draw():
+            print("DRAW!")
             break
         get_computer_choice()
         time.sleep(.5)
